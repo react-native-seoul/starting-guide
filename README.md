@@ -121,7 +121,26 @@ yarn add --dev @types/react @types/react-native
 $(npm bin)/tsc --init
 ```
 
-번들러가 트랜스파일 과정을 자동으로 해줄 수 있도록 설정해줍니다.
+기본값으로 아래와 비슷한 설정 파일(`tsconfig.json`)이 생성되며 우리 프로젝트에 맞게 수정해줍니다.
+
+```json
+{
+  "compilerOptions": {
+    "jsx": "react-native",
+    "module": "es2015",
+    "noEmit": true,
+    "strict": true,
+    "target": "es5"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
+```
+
+tsconfig.json 각 옵션에 대한 설명은 [타입스크립트 핸드북](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)페이지에서 확인 가능합니다.
+
+번들러가 트랜스파일 과정을 자동으로 해줄 수 있도록 [react-native-typescript-transformer](https://github.com/ds300/react-native-typescript-transformer)를 설치해줍니다.
 
 ```shell
 yarn add --dev react-native-typescript-transformer
@@ -145,7 +164,7 @@ module.exports = {
 
 ### ts-lint
 
-eslint와 유사하지만 TypeScript 환경에서 사용 가능합니다.
+eslint와 유사하지만 TypeScript 환경에서 사용 가능한 [tslint](https://github.com/palantir/tslint)를 설치합니다.
 
 ```shell
 yarn add --dev tslint tslint-react
@@ -155,6 +174,18 @@ yarn add --dev tslint tslint-react
 
 ```shell
 $(npm bin)/tslint --init
+```
+
+```JSON
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended", "tslint-react"
+    ],
+    "jsRules": {},
+    "rules": {},
+    "rulesDirectory": []
+}
 ```
 
 ## Editor extensions 설치
