@@ -1,5 +1,8 @@
 # 리액트네이티브 시작하기
 
+> `react-native-cli`를 이용해 리액트네이티브 프로젝트를 처음부터 시작할 수 있는 방법을 설명해두었습니다.
+> typescript 등 몇 가지 필수사항이 아닌 라이브러리의 설치 방법도 포함되어 있으므로 상황에 맞게 사용하시기 바랍니다.
+
 ## ReactNative cli 설치
 
 가장 먼저 [nodenv](https://github.com/nodenv/nodenv)를 통해 Node.js 를 설치합니다.
